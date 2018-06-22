@@ -19,6 +19,17 @@ $(document).ready(function () {
         $('.slick-next').click();
     });
 
+//min-slider
+    $('.min-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 8,
+        adaptiveHeight: true
+        // nextArrow: '<button type="button" class="slick-next"><img src="assets/images/temp/arrow-right.png" alt="Next"></button>',
+        // prevArrow: '<button type="button" class="slick-prev"><img src="assets/images/temp/arrow-left.png" alt="Prew"></button>'
+    });
+
 //scrolling
     $('.go_to').click(function () {
         var scroll_el = $(this).attr('href');

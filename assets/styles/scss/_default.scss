@@ -1,8 +1,11 @@
+html {
+  font-size: 12px;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   color: #191919;
-  font-size: 12px;
 }
 
 section {
@@ -25,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
 .section__title {
   text-align: center;
   display: block;
-  font-size: 3.333em;
+  font-size: 3.333rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -33,29 +36,28 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
 .section__title:after {
   content: '';
   display: block;
-  margin: 1.917rem auto 0;
-  width: 100px;
-  height: 2px;
+  margin: 2.5rem auto 0;
+  width: 8.333rem;
+  height: 0.167rem;
   background-color: #e6e6e6;
 }
 
 .section__subtitle {
   text-align: center;
   display: block;
-  font-size: 1.833em;
+  font-size: 1.833rem;
   font-weight: 100;
-  line-height: 2.3rem;
-  margin-top: 1.3rem;
+  line-height: 3rem;
+  margin: 2.5rem 0;
 }
 
 .third__title {
-  font-size: 1.833em;
+  font-size: 1.833rem;
   font-weight: 500;
   margin-bottom: 1.55rem;
 }
 
 .simple__text {
-  text-align: center;
   line-height: 2em;
 }
 

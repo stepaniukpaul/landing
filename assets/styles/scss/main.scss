@@ -7,8 +7,10 @@
 
 
 $white: #ffffff;
-//variables end
-//---------------------------------------------------------------------------------------
+$gray: #898989;
+
+
+//variables end--------------------------------------------------------------------------------------
 
 //ui kit
 
@@ -21,20 +23,81 @@ $white: #ffffff;
   color: #fff;
 }
 
-//.relative {
-//  position: relative;
-//}
+.parallax-one {
+  background: url("../images/temp/parallax.jpg") no-repeat fixed center / cover;
+  min-height: 42.500rem;
+}
 
+.parallax-two {
+  background: url("../images/temp/parallax-2.jpg") no-repeat fixed center / cover;
+  min-height: 50rem;
+}
 
-//ui kit end
-//---------------------------------------------------------------------------------------
+.parallax {
+  background-position-x: 50%;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  color: $white;
+  .parallax-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8.333em 0;
+  }
+}
+
+input {
+  width: 100%;
+  min-height: 3.750rem;
+  padding: 0 1.333rem;
+  font-weight: 800;
+}
+
+input.input {
+  background-color: transparent;
+  border: 0.083rem solid $white;
+  font-size: 1.333rem;
+  color: $white;
+  &::placeholder {
+    text-indent: 0px;
+    transition: text-indent 0.9s ease;
+    color: $gray;
+    font-weight: 300;
+  }
+  &:focus::placeholder {
+    text-indent: -500px;
+    transition: text-indent 0.3s ease;
+  }
+}
+
+input.button {
+  cursor: pointer;
+  background-color: $white;
+  border: none;
+  font-size: 1.833rem;
+  color: $gray;
+  text-transform: uppercase;
+  transition: background-color 2s ease;
+  &:hover {
+    background-color: $gray;
+    color: white;
+    mix-blend-mode: multiply;
+    transition: background-color 2s ease;
+  }
+}
+
+//ui kit end---------------------------------------------------------------------------------------
 
 //header styles
 
-
-.header {
+header.header {
   height: 100vh;
-
   .container-first {
     height: 100vh;
     width: 100%;
@@ -53,7 +116,6 @@ $white: #ffffff;
         }
       }
       & > ul {
-
         li {
           margin-left: 1.250em;
         }
@@ -68,7 +130,7 @@ $white: #ffffff;
         font-size: 6em;
         font-weight: 300;
         text-transform: uppercase;
-        margin-top: 1.7rem;
+        margin-top: 2.167rem;
         & > span {
           font-weight: 900;
         }
@@ -82,7 +144,6 @@ $white: #ffffff;
     .down {
       position: absolute;
       left: 50%;
-      //top: 83.5%;
       bottom: 7.1%;
       span {
         color: $white;
@@ -128,67 +189,85 @@ $white: #ffffff;
       }
     }
   }
-}
-
 // Slider
-.welcome {
-  .slider {
-    height: 100vh;
-    &.slick-dotted {
-      margin: 0;
-    }
-    .slider-bg {
+  .welcome {
+    .slider {
       height: 100vh;
-      width: 100%;
-      position: relative;
-      &.first {
-        background: url("../images/temp/bg-1.jpg") no-repeat center / cover;
+      &.slick-dotted {
+        margin: 0;
       }
-      &.second {
-        background: url("../images/temp/bg-2.jpg") no-repeat center / cover;
+      .slider-bg {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        &.first {
+          background: url("../images/temp/bg-1.jpg") no-repeat center / cover;
+        }
+        &.second {
+          background: url("../images/temp/bg-2.jpg") no-repeat center / cover;
+        }
+        &.third {
+          background: url("../images/temp/bg-3.jpg") no-repeat center / cover;
+        }
       }
-      &.third {
-        background: url("../images/temp/bg-3.jpg") no-repeat center / cover;
+      .slick-slide {
+        height: 100%;
       }
-    }
-    .slick-slide {
-      height: 100%;
-    }
-    .slick-arrow {
-      position: absolute;
-      opacity: 0;
-    }
-    .slick-next {
-      top: 0;
+      .slick-arrow {
+        position: absolute;
+        opacity: 0;
+      }
+      .slick-next {
+        top: 0;
+      }
     }
   }
 }
 
-.about {
+//header styles end---------------------------------------------------------------------------------------
+
+
+//sections styles
+
+section.about {
   .section__item {
-    margin-top: 5em;
+    margin-top: 2.5em;
     .section__icon {
       margin-bottom: 1.750em;
     }
+    .simple__text {
+      text-align: center;
+    }
   }
 }
 
+section.culture {
+  .section__item {
+    margin-top: 2.5em;
+  }
+  .section__icon {
+    margin: 0 1.750em 0 6.667em;
+  }
+}
 
-  .parallax {
-    background: url("../images/temp/parallax.jpg") no-repeat fixed center / cover;
-    height: 513px;
-    position: relative;
-    color: $white;
+.parallax-two {
   .parallax-content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-top: 118px;
+    .form-submit {
+      span {
+        display: block;
+        margin: 0.833rem 1.5rem 2rem;
+      }
+    }
   }
 }
 
+section.portfolio {
+  .min-slider {
+
+  }
+}
+
+//sections styles end---------------------------------------------------------------------------------------
 
 
 
@@ -230,5 +309,3 @@ $white: #ffffff;
 
 
 
-//header styles end
-//---------------------------------------------------------------------------------------
