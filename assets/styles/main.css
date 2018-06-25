@@ -143,17 +143,6 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
 .simple__text {
   line-height: 2em; }
 
-.translate-center {
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
-.absolute {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; }
-
 /* Slider */
 .slick-slider {
   position: relative;
@@ -234,14 +223,6 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
   text-transform: uppercase;
   color: #fff; }
 
-.parallax-one {
-  background: url("../images/temp/parallax.jpg") no-repeat fixed center/cover;
-  min-height: 42.500rem; }
-
-.parallax-two {
-  background: url("../images/temp/parallax-2.jpg") no-repeat fixed center/cover;
-  min-height: 50rem; }
-
 .parallax {
   background-position-x: 50%;
   background-position-y: center;
@@ -251,14 +232,22 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
   background-attachment: fixed;
   position: relative;
   color: #ffffff; }
-  .parallax .parallax-content {
+  .parallax__content {
     position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 8.333em 0; }
+
+.parallax-one {
+  background: url("../images/temp/parallax.jpg") no-repeat fixed center/cover;
+  min-height: 42.500rem; }
+
+.parallax-two {
+  background: url("../images/temp/parallax-2.jpg") no-repeat fixed center/cover;
+  min-height: 50rem; }
 
 input {
   width: 100%;
@@ -353,10 +342,14 @@ input.button {
 header.header {
   height: 100vh; }
   header.header .container-first {
+    position: absolute;
     height: 100vh;
     width: 100%;
     z-index: 12;
-    padding-top: 3.167em; }
+    padding-top: 3.167em;
+    left: 0;
+    right: 0;
+    top: 0; }
     header.header .container-first .nav-bar nav > ul li {
       margin-right: 1.250em; }
     header.header .container-first .nav-bar > ul li {
@@ -365,7 +358,10 @@ header.header {
       color: #ffffff;
       position: absolute;
       top: 50%;
-      left: 50%; }
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
       header.header .container-first .brand h1 {
         font-size: 6em;
         font-weight: 300;
@@ -380,7 +376,10 @@ header.header {
     header.header .container-first .down {
       position: absolute;
       left: 50%;
-      bottom: 7.1%; }
+      bottom: 7.1%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
       header.header .container-first .down span {
         color: #ffffff; }
       header.header .container-first .down .scroll {
@@ -394,7 +393,10 @@ header.header {
         header.header .container-first .down .scroll img {
           position: absolute;
           top: 50%;
-          left: 50%; }
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
     header.header .container-first .arrows button {
       position: absolute;
       top: 50%;
@@ -416,27 +418,31 @@ header.header {
       left: 0; }
       header.header .container-first .arrows .arrow-prev:hover {
         left: -5px; }
-  header.header .welcome .slider {
-    height: 100vh; }
-    header.header .welcome .slider.slick-dotted {
-      margin: 0; }
-    header.header .welcome .slider .slider-bg {
-      height: 100vh;
-      width: 100%;
-      position: relative; }
-      header.header .welcome .slider .slider-bg.first {
-        background: url("../images/temp/bg-1.jpg") no-repeat center/cover; }
-      header.header .welcome .slider .slider-bg.second {
-        background: url("../images/temp/bg-2.jpg") no-repeat center/cover; }
-      header.header .welcome .slider .slider-bg.third {
-        background: url("../images/temp/bg-3.jpg") no-repeat center/cover; }
-    header.header .welcome .slider .slick-slide {
-      height: 100%; }
-    header.header .welcome .slider .slick-arrow {
-      position: absolute;
-      opacity: 0; }
-    header.header .welcome .slider .slick-next {
-      top: 0; }
+  header.header .welcome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; }
+    header.header .welcome .slider {
+      height: 100vh; }
+      header.header .welcome .slider.slick-dotted {
+        margin: 0; }
+      header.header .welcome .slider .slider-bg {
+        height: 100vh;
+        width: 100%; }
+        header.header .welcome .slider .slider-bg.first {
+          background: url("../images/temp/bg-1.jpg") no-repeat center/cover; }
+        header.header .welcome .slider .slider-bg.second {
+          background: url("../images/temp/bg-2.jpg") no-repeat center/cover; }
+        header.header .welcome .slider .slider-bg.third {
+          background: url("../images/temp/bg-3.jpg") no-repeat center/cover; }
+      header.header .welcome .slider .slick-slide {
+        height: 100%; }
+      header.header .welcome .slider .slick-arrow {
+        position: absolute;
+        opacity: 0; }
+      header.header .welcome .slider .slick-next {
+        top: 0; }
 
 section.about .section__item {
   margin-top: 2.5em; }
@@ -451,6 +457,156 @@ section.culture .section__item {
 section.culture .section__icon {
   margin: 0 1.750em 0 6.667em; }
 
-.parallax-two .parallax-content .form-submit span {
+.parallax-two .parallax__content .form-submit span {
   display: block;
   margin: 0.833rem 1.5rem 2rem; }
+
+section.portfolio .portfolio__button {
+  width: 10.250rem;
+  padding: 1.667rem 2.667rem;
+  border: 0.083rem solid #898989;
+  font-weight: 600; }
+
+section.portfolio .portfolio__slider {
+  position: relative; }
+  section.portfolio .portfolio__slider .min-slider {
+    padding: 0 48px; }
+    section.portfolio .portfolio__slider .min-slider .slider__item {
+      padding: 1.667rem 0;
+      border: 0.083rem solid #898989; }
+      section.portfolio .portfolio__slider .min-slider .slider__item img {
+        margin: 0 auto; }
+    section.portfolio .portfolio__slider .min-slider .slick-arrow {
+      opacity: 0; }
+  section.portfolio .portfolio__slider .arrows button {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 13;
+    opacity: .7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 4.167rem;
+    height: 100%;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease; }
+  section.portfolio .portfolio__slider .arrows .arrow-next {
+    right: 0; }
+    section.portfolio .portfolio__slider .arrows .arrow-next:hover {
+      right: -5px; }
+  section.portfolio .portfolio__slider .arrows .arrow-prev {
+    left: 0; }
+    section.portfolio .portfolio__slider .arrows .arrow-prev:hover {
+      left: -5px; }
+
+section.portfolio .portfolio__back {
+  position: relative;
+  overflow: hidden;
+  margin: 35px 0; }
+  section.portfolio .portfolio__back .portfolio__col {
+    padding: 0;
+    border: 15px solid #ffffff; }
+    section.portfolio .portfolio__back .portfolio__col .portfolio__block {
+      position: relative;
+      height: 280px;
+      background-color: rgba(0, 0, 0, 0.5); }
+      section.portfolio .portfolio__back .portfolio__col .portfolio__block img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        mix-blend-mode: luminosity; }
+      section.portfolio .portfolio__back .portfolio__col .portfolio__block:hover img {
+        mix-blend-mode: normal; }
+  section.portfolio .portfolio__back .portfolio__front {
+    position: absolute;
+    background: url("../images/temp/bg-f-7.jpg") center/cover;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    left: 0;
+    right: 0;
+    top: 0; }
+
+section.review {
+  position: relative;
+  color: #ffffff; }
+  section.review .container {
+    position: absolute;
+    padding: 8.333em 0;
+    z-index: 12;
+    left: 0;
+    right: 0;
+    top: 0; }
+    section.review .container .arrows button {
+      position: absolute;
+      top: 50%;
+      z-index: 13;
+      opacity: .7;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 150px;
+      height: 150px;
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
+    section.review .container .arrows .arrow-next {
+      right: 0; }
+      section.review .container .arrows .arrow-next:hover {
+        right: -5px; }
+    section.review .container .arrows .arrow-prev {
+      left: 0; }
+      section.review .container .arrows .arrow-prev:hover {
+        left: -5px; }
+  section.review .welcome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; }
+    section.review .welcome .slider {
+      height: 50rem; }
+      section.review .welcome .slider.slick-dotted {
+        margin: 0; }
+      section.review .welcome .slider .slider-bg {
+        height: 50rem;
+        width: 100%;
+        position: relative; }
+        section.review .welcome .slider .slider-bg.first {
+          background: url("../images/temp/bg-f-7.jpg") no-repeat center/cover; }
+        section.review .welcome .slider .slider-bg.second {
+          background: url("../images/temp/bg-f-6.jpg") no-repeat center/cover; }
+        section.review .welcome .slider .slider-bg.third {
+          background: url("../images/temp/bg-f-5.jpg") no-repeat center/cover; }
+        section.review .welcome .slider .slider-bg.fourth {
+          background: url("../images/temp/bg-f-4.jpg") no-repeat center/cover; }
+        section.review .welcome .slider .slider-bg.fifth {
+          background: url("../images/temp/bg-f-3.jpg") no-repeat center/cover; }
+        section.review .welcome .slider .slider-bg.sixth {
+          background: url("../images/temp/bg-f-2.jpg") no-repeat center/cover; }
+      section.review .welcome .slider .slick-slide {
+        height: 100%; }
+      section.review .welcome .slider .slick-arrow {
+        position: absolute;
+        opacity: 0; }
+      section.review .welcome .slider .slick-next {
+        top: 0; }
+      section.review .welcome .slider::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        content: '';
+        display: block;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); }

@@ -60,18 +60,3 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
 .simple__text {
   line-height: 2em;
 }
-
-.translate-center {
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
-.absolute {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-}

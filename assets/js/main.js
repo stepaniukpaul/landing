@@ -11,14 +11,6 @@ $(document).ready(function () {
         // prevArrow: '<button type="button" class="slick-prev"><img src="assets/images/temp/arrow-left.png" alt="Prew"></button>'
     });
 
-//slider buttons
-    $('.arrow-prev').on('click',function () {
-        $('.slick-prev').click();
-    });
-    $('.arrow-next').on('click',function () {
-        $('.slick-next').click();
-    });
-
 //min-slider
     $('.min-slider').slick({
         dots: false,
@@ -28,6 +20,14 @@ $(document).ready(function () {
         adaptiveHeight: true
         // nextArrow: '<button type="button" class="slick-next"><img src="assets/images/temp/arrow-right.png" alt="Next"></button>',
         // prevArrow: '<button type="button" class="slick-prev"><img src="assets/images/temp/arrow-left.png" alt="Prew"></button>'
+    });
+
+//slider buttons
+    $('.arrow-prev').on('click',function () {
+        $('.slick-prev').click();
+    });
+    $('.arrow-next').on('click',function () {
+        $('.slick-next').click();
     });
 
 //scrolling

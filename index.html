@@ -13,22 +13,22 @@
 </head>
 <body>
     <header class="header" id="header">
-        <div class="container container-first absolute">
+        <div class="container container-first">
             <div class="nav-bar d-flex justify-content-between">
                 <nav>
                     <ul class="d-flex">
                         <li>
-                            <a href="#contact" class="nav-link">
+                            <a href="#contact" class="nav-link go_to">
                                 Контакты
                             </a>
                         </li>
                         <li>
-                            <a href="#vacancy" class="nav-link">
+                            <a href="#vacancy" class="nav-link go_to">
                                 Вакансии
                             </a>
                         </li>
                         <li>
-                            <a href="#support" class="nav-link">
+                            <a href="#support" class="nav-link go_to">
                                 Поддержка
                             </a>
                         </li>
@@ -47,17 +47,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="brand d-flex flex-column align-items-center translate-center">
+            <div class="brand d-flex flex-column align-items-center ">
                 <img src="assets/images/temp/logo.png" alt="Logotype">
                 <h1><span>Rocket</span> company</h1>
                 <span>Студия web разработки</span>
             </div>
-            <div class="down d-flex flex-column align-items-center translate-center">
+            <div class="down d-flex flex-column align-items-center">
                 <span>
                     Learn More About Us
                 </span>
                 <a href="#about" class="scroll go_to">
-                    <img src="assets/images/temp/arrow-down.png" alt="˅" class="translate-center">
+                    <img src="assets/images/temp/arrow-down.png" alt="˅">
                 </a>
             </div>
             <div class="arrows">
@@ -69,7 +69,7 @@
                 </button>
             </div>
         </div>
-        <div class="welcome absolute">
+        <div class="welcome">
             <div class="slider">
                 <div class="slider-bg first"></div>
                 <div class="slider-bg second"></div>
@@ -129,7 +129,7 @@
         </div>
     </section>
     <div class="parallax parallax-one">
-        <div class="parallax-content">
+        <div class="parallax__content">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
@@ -243,7 +243,7 @@
         </div>
     </section>
     <div class="parallax parallax-two">
-        <div class="parallax-content">
+        <div class="parallax__content">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
@@ -295,44 +295,164 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="min-slider">
-                        <div class="slider__item">
-                            <img src="assets/images/temp/paint-brush.png" alt="Photoshop">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <input type="button" value="All" class="button portfolio__button">
+                </div>
+                <div class="col-10">
+                    <div class="portfolio__slider">
+                        <div class="min-slider">
+                            <div class="slider__item">
+                                <img src="assets/images/temp/paint-brush.png" alt="Photoshop">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/search.png" alt="Searching">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/wordpress.png" alt="Wordpress">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/opencart.png" alt="Opencart">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/share.png" alt="Sharing">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/modx.png" alt="ModX">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/yii.png" alt="Yii">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/joomla.png" alt="Joomla">
+                            </div>
+                            <div class="slider__item">
+                                <img src="assets/images/temp/telegram.png" alt="Telegram">
+                            </div>
                         </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/search.png" alt="Searching">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/wordpress.png" alt="Wordpress">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/opencart.png" alt="Opencart">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/share.png" alt="Sharing">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/modx.png" alt="ModX">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/yii.png" alt="Yii">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/joomla.png" alt="Joomla">
-                        </div>
-                        <div class="slider__item">
-                            <img src="assets/images/temp/telegram.png" alt="Telegram">
+                        <div class="arrows">
+                            <button type="button" class="arrow-prev">
+                                <img src="assets/images/temp/arrow-left.png" alt="Prev">
+                            </button>
+                            <button type="button" class="arrow-next">
+                                <img src="assets/images/temp/arrow-right.png" alt="Next">
+                            </button>
                         </div>
                     </div>
-                    <div class="arrows">
-                        <button type="button" class="arrow-prev">
-                            <img src="assets/images/temp/arrow-left.png" alt="Prev">
-                        </button>
-                        <button type="button" class="arrow-next">
-                            <img src="assets/images/temp/arrow-right.png" alt="Next">
-                        </button>
+                </div>
+            </div>
+            <div class="portfolio__back">
+                <div class="portfolio__front"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 portfolio__col">
+                        <div class="portfolio__block">
+                            <img src="assets/images/temp/logo-1.png" alt="Our work">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 portfolio__col">
+                        <div class="portfolio__block">
+                            <img src="assets/images/temp/logo-2.png" alt="Our work">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 portfolio__col">
+                        <div class="portfolio__block">
+                            <img src="assets/images/temp/logo-3.png" alt="Our work">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 portfolio__col">
+                        <div class="portfolio__block">
+                            <img src="assets/images/temp/logo-4.png" alt="Our work">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 portfolio__col">
+                        <div class="portfolio__block">
+                            <img src="assets/images/temp/logo-5.png" alt="Our work">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 portfolio__col">
+                        <div class="portfolio__block">
+                            <img src="assets/images/temp/logo-6.png" alt="Our work">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="review" id="review">
+        <div class="container">
+            <!--<div class="row justify-content-center">-->
+                <!--<div class="col-12">-->
+                    <!--<h2 class="section__title">-->
+                        <!--What others say about us-->
+                    <!--</h2>-->
+                <!--</div>-->
+                <!--<div class="col-8">-->
+                    <!--<p class="section__subtitle">-->
+                        <!--Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э.,-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="arrows">
+                <button type="button" class="arrow-prev">
+                    <img src="assets/images/temp/arrow-left.png" alt="Prev">
+                </button>
+                <button type="button" class="arrow-next">
+                    <img src="assets/images/temp/arrow-right.png" alt="Next">
+                </button>
+            </div>
+        </div>
+        <div class="welcome">
+            <div class="slider">
+                <div class="slider-bg first">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <h2 class="section__title">
+                                    What others say about us
+                                </h2>
+                            </div>
+                            <div class="col-8">
+                                <p class="section__subtitle">
+                                    Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э.,
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-bg second"></div>
+                <div class="slider-bg third">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <h2 class="section__title">
+                                    3rd dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                                </h2>
+                            </div>
+                            <div class="col-8">
+                                <p class="section__subtitle">
+                                    псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э.,
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-bg fourth"></div>
+                <div class="slider-bg fifth"></div>
+                <div class="slider-bg sixth">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <h2 class="section__title">
+                                    6th
+                                </h2>
+                            </div>
+                            <div class="col-8">
+                                <p class="section__subtitle">
+                                    псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э.,
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
