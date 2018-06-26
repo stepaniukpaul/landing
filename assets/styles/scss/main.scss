@@ -1,14 +1,20 @@
 @import '_reset';
 @import '_fonts';
+@import '../../libs/fontawesome/scss/fontawesome.scss';
+@import '../../libs/fontawesome/scss/fa-regular.scss';
+@import '../../libs/fontawesome/scss/fa-brands.scss';
+@import '../../libs/fontawesome/scss/fa-solid.scss';
 @import '_default';
 @import '../../libs/slick/css/slick';
+
+@charset "utf-8";
 
 //variables
 
 
 $white: #ffffff;
 $gray: #898989;
-
+$gold: #a08040;
 
 @mixin translate-center {
   -webkit-transform: translate(-50%,-50%);
@@ -39,6 +45,7 @@ $gray: #898989;
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
+
 
 //variables end--------------------------------------------------------------------------------------
 
@@ -386,6 +393,15 @@ section.review {
     padding: 8.333em 0;
     z-index: 12;
     @include top-center;
+    i.fas {
+      text-align: center;
+      display: block;
+      font-size: 1.500rem;
+      margin-top: 2.833rem;
+    }
+    .section__title:after {
+      display: none;
+    }
     .arrows {
       button {
         position: absolute;
@@ -417,6 +433,7 @@ section.review {
 // Slider bottom
   .welcome {
     position: absolute;
+    text-align: center;
     @include top-center;
     .slider {
       //position: relative;
@@ -446,6 +463,84 @@ section.review {
         &.sixth {
           background: url("../images/temp/bg-f-2.jpg") no-repeat center / cover;
         }
+        //semitransparent shadow on slider image
+        &::after {
+          position: absolute;
+          @include top-center;
+          content: '';
+          display: block;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        .section__subtitle {
+          margin-top: 8.333rem;
+        }
+        .author {
+          font-size: 1.833rem;
+          font-weight: 600;
+          & p {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0.833rem;
+          }
+          & p::before,
+          & p::after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 0.500rem;
+            height: 0.167rem;
+            background-color: $white;
+            top: 50%;
+          }
+          & p::before {
+            left: -1rem;
+          }
+          & p::after {
+            right: -1rem;
+          }
+          & a {
+            display: block;
+            font-size: 1.167rem;
+            font-weight: 500;
+            color: $gold;
+            text-decoration: underline;
+          }
+        }
+        .video {
+          font-size: 1.500rem;
+          font-weight: 600;
+          margin-top: 2.833rem;
+          & a {
+            position: relative;
+            display: block;
+            margin: 1.5rem auto 0;
+            width: 4.167rem;
+            height: 4.167rem;
+            border-radius: 100%;
+            border: 0.083rem solid $white;
+            transition: all 1s ease;
+            &::before {
+              font-family: 'FontAwesome';
+              position: absolute;
+              display: block;
+              content: "\f0da";
+              font-size: 2.500rem;
+              top: 50%;
+              left: 56%;
+              @include translate-center;
+            }
+            &:hover {
+              border: none;
+              transform: rotate(360deg);
+              transition: all 1s ease;
+              &::before {
+                content: "\f03d";
+                font-size: 2rem;
+              }
+            }
+          }
+        }
       }
       .slick-slide {
         height: 100%;
@@ -456,14 +551,6 @@ section.review {
       }
       .slick-next {
         top: 0;
-      }
-      &::after {
-        position: absolute;
-        @include top-center;
-        content: '';
-        display: block;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
       }
     }
   }

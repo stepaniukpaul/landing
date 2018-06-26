@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6, p, span, b, div {
   line-height: 1;
 }
 
+a {
+  cursor: pointer;
+}
+
 .section__title {
   text-align: center;
   display: block;
